@@ -1,0 +1,30 @@
+[project]
+name = "laclip"
+version = "0.1.0"
+description = "Language augmented CLIP (LaCLIP) — NeurIPS 2023"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fairscale==0.4.13",
+    "fire==0.5.0",
+    "ftfy==6.1.3",
+    "numpy==1.26.4",
+    "open-clip-torch==2.20.0",
+    "pillow==10.2.0",
+    "regex==2023.10.3",
+    "tensorboard==2.15.2",
+    "timm==0.6.13",
+    "torch==2.1.2",
+    "torchvision==0.16.2",
+    "tqdm==4.66.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.uv]
+package = false
